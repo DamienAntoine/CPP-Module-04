@@ -6,7 +6,7 @@ int main()
 {
 	int count = 0;
 	int array_size = 10;
-	Animal* animals[array_size];
+	aAnimal* animals[array_size];
 	while (count < (array_size / 2))
 	{
 		animals[count] = new Dog();
@@ -34,3 +34,11 @@ int main()
 
 	return 0;
 }
+
+/*
+int	main()
+{
+	//not working because pure virtual function
+	//aAnimal animal;
+	//aAnimal *ptr = new aAnimal();
+}*/

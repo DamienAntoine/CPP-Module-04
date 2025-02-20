@@ -1,24 +1,24 @@
-#ifndef __CAT_H__
-#define __CAT_H__
+#ifndef __DOG_H__
+#define __DOG_H__
 
 #include <iostream>
 #include "animal.hpp"
 #include "brain.hpp"
 
 // ************************************************************************** //
-//                              Cat      Class                                //
+//                              Dog      Class                                //
 // ************************************************************************** //
 
-class Cat : public Animal
+class Dog : public aAnimal
 {
 	private:
 		Brain* brain;
 
 	public:
-		Cat();
-		Cat(const Cat &other);
-        Cat& operator=(const Cat &other);
-		virtual ~Cat();
+		Dog();
+		Dog(const Dog &other);
+		Dog& operator=(const Dog &other);
+		virtual ~Dog();
 		void	makeSound() const override;
 };
 

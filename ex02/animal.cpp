@@ -1,17 +1,17 @@
 #include "animal.hpp"
 
-Animal::Animal()
+aAnimal::aAnimal()
 {
 	std::cout << "Animal created" << std::endl;
 }
 
-Animal::Animal(const Animal &other)
+aAnimal::aAnimal(const aAnimal &other)
 {
 	this->type = other.type;
 	std::cout << "Animal copied" << std::endl;
 }
 
-Animal& Animal::operator=(const Animal &other)
+aAnimal& aAnimal::operator=(const aAnimal &other)
 {
 	if (this != &other)
 	{
@@ -21,17 +21,17 @@ Animal& Animal::operator=(const Animal &other)
 	return *this;
 }
 
-Animal::~Animal()
+aAnimal::~aAnimal()
 {
 	std::cout << "Animal Destroyed" << std::endl;
 }
 
-void	Animal::makeSound(void) const
+void	aAnimal::makeSound(void) const
 {
 	std::cout << "animal noises" << std::endl;
 }
 
-std::string Animal::getType() const
+std::string aAnimal::getType() const
 {
 	return (this->type);
 }

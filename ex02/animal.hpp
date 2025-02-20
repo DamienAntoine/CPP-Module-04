@@ -8,16 +8,18 @@
 //                             Animal    Class                                //
 // ************************************************************************** //
 
-class Animal
+class aAnimal
 {
 	protected:
 		std::string type;
 
 	public:
-		Animal();
-		virtual			~Animal();
-		virtual	void	makeSound(void) const;
-		std::string		getType() const;
+		aAnimal();
+		aAnimal(const aAnimal &other);
+		aAnimal& operator=(const aAnimal &other);
+		virtual ~aAnimal();
+		virtual void makeSound() const = 0;
+		std::string getType() const;
 };
 
 #endif

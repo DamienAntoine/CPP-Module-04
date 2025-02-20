@@ -1,8 +1,15 @@
-NAME     := Polymorphism
-SRCS     := main.cpp cat.cpp dog.cpp animal.cpp brain.cpp
+NAME     := Materias
+SRCS	:=	base/ICharacter.cpp \
+			base/AMateria.cpp \
+			base/IMateriaSource.cpp \
+			concrete/character.cpp \
+			concrete/cure.cpp \
+			concrete/ice.cpp \
+			concrete/MateriaSource.cpp \
+			main.cpp
 OBJS     := $(SRCS:.cpp=.o)
 CXX      := g++
-CXXFLAGS := -Wall -Werror -Wextra
+CXXFLAGS := -Wall -Werror -Wextra -I.
 
 all: $(NAME)
 

@@ -2,20 +2,20 @@
 
 Animal::Animal()
 {
-    std::cout << "Animal object created" << std::endl;
+	std::cout << "Animal created" << std::endl;
 }
 
 Animal::~Animal()
 {
-    std::cout << "Animal object destroyed" << std::endl;
+	std::cout << "Animal Destroyed" << std::endl;
 }
 
-void Animal::makeSound() const
+void	Animal::makeSound(void) const
 {
-    std::cout << "Animal noise" << std::endl;
+	std::cout << "animal noises" << std::endl;
 }
 
-std::string    Animal::getType() const
+std::string Animal::getType() const
 {
-    return type;
+	return (this->type);
 }

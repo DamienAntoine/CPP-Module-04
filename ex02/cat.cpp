@@ -8,11 +8,11 @@ Cat::Cat() : brain(new Brain())
 
 Cat::~Cat()
 {
-	std::cout << "Cat destroyed" << std::endl;
 	delete this->brain;
+	std::cout << "Cat destroyed" << std::endl;
 }
 
-Cat::Cat(const Cat &other) : Animal(other)
+Cat::Cat(const Cat &other) : aAnimal(other)
 {
 	this->brain = new Brain(*other.brain);
 	this->type = other.type;
@@ -23,7 +23,7 @@ Cat& Cat::operator=(const Cat &other)
 {
 	if (this != &other)
 	{
-		Animal::operator=(other);
+		aAnimal::operator=(other);
 		delete this->brain;
 		this->brain = new Brain(*other.brain);
 		this->type = other.type;

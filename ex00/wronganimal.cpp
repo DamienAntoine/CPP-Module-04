@@ -2,20 +2,20 @@
 
 WrongAnimal::WrongAnimal()
 {
-    std::cout << "Animal object created" << std::endl;
+	std::cout << "Wrong Animal Created." << std::endl;
 }
 
 WrongAnimal::~WrongAnimal()
 {
-    std::cout << "Animal object destroyed" << std::endl;
+	std::cout << "Wrong Animal Destroyed." << std::endl;
 }
 
-void WrongAnimal::makeSound() const
+void	WrongAnimal::makeSound() const
 {
-    std::cout << "Animal noise" << std::endl;
+	std::cout << "wrong animal noises" << std::endl;
 }
 
-std::string    WrongAnimal::getType() const
+std::string WrongAnimal::getType() const
 {
-    return type;
+	return (this->type);
 }

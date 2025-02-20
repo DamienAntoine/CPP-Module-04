@@ -3,22 +3,23 @@
 
 #include <iostream>
 
+
 // ************************************************************************** //
 //                             Animal    Class                                //
 // ************************************************************************** //
 
 class Animal
 {
-    protected:
-        std::string type;
+	protected:
+		std::string type;
 
-    public:
-        Animal();
-        
-        virtual         ~Animal();
-        virtual void    makeSound() const;
-
-        std::string     getType() const;
+	public:
+		Animal();
+		Animal(const Animal &other);
+		Animal& operator=(const Animal &other);
+		virtual ~Animal();
+		virtual void makeSound() const;
+		std::string getType() const;
 };
 
 #endif

@@ -2,15 +2,16 @@
 
 WrongCat::WrongCat()
 {
-    type = "Cat";
-    std::cout << "Cat object created" << std::endl;
-}
-WrongCat::~WrongCat()
-{
-    std::cout << "Cat object destroyed" << std::endl;
+	type = "WrongCat";
+	std::cout << "WrongCat created" << std::endl;
 }
 
-void    WrongCat::makeSound() const
+WrongCat::~WrongCat()
 {
-    std::cout << "Meow" << std::endl;
+	std::cout << "WrongCat destroyed" << std::endl;
+}
+
+void WrongCat::makeSound() const
+{
+	std::cout << "Wrong meow!" << std::endl;
 }

@@ -5,16 +5,15 @@
 #include "animal.hpp"
 
 // ************************************************************************** //
-//                             Dog       Class                                //
+//                              Dog      Class                                //
 // ************************************************************************** //
 
 class Dog : public Animal
 {
-    public:
-        Dog();
-        ~Dog();
-
-        void makeSound() const override;
+	public:
+		Dog();
+		~Dog();
+		void	makeSound() const override;
 };
 
 #endif

@@ -9,7 +9,7 @@
 //                              Cat      Class                                //
 // ************************************************************************** //
 
-class Cat : public Animal
+class Cat : public aAnimal
 {
 	private:
 		Brain* brain;

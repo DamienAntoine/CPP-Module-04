@@ -1,5 +1,5 @@
 NAME     := Polymorphism
-SRCS     := main.cpp animal.cpp dog.cpp cat.cpp wronganimal.cpp wrongcat.cpp
+SRCS     := main.cpp cat.cpp dog.cpp animal.cpp wronganimal.cpp wrongcat.cpp
 OBJS     := $(SRCS:.cpp=.o)
 CXX      := g++
 CXXFLAGS := -Wall -Werror -Wextra

@@ -1,38 +1,54 @@
 #include "animal.hpp"
-#include "cat.hpp"
-#include "dog.hpp"
 #include "wronganimal.hpp"
+#include "cat.hpp"
 #include "wrongcat.hpp"
+#include "dog.hpp"
 
 int main()
 {
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
+	const Animal* meta = new Animal();
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	std::cout << meta->getType() << " " << std::endl;
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound();
+	j->makeSound();
+	meta->makeSound();
 
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
+	delete meta;
+	delete j;
+	delete i;
 
-    i->makeSound(); //will output the cat sound!
-    j->makeSound();
-    meta->makeSound();
+	std::cout << std::endl;
 
-    delete meta;
-    delete j;
-    delete i;
+	//polymorphic, allocated on heap, manually deleted
+	const WrongAnimal* wrongmeta = new WrongAnimal();
+	const WrongAnimal* wrongi = new WrongCat();
+	std::cout << wrongmeta->getType() << " " << std::endl;
+	std::cout << wrongi->getType() << " " << std::endl;
+	wrongi->makeSound();
+	wrongmeta->makeSound();
 
-    std::cout << std::endl;
+	delete wrongmeta;
+	delete wrongi;
 
-    const WrongAnimal *wrongmeta = new WrongAnimal();
-    const WrongAnimal *k = new WrongCat();
+	std::cout << "\nAdditional Tests:\n\n";
 
-    std::cout << k->getType() << " " << std::endl;
+	std::cout << "\ndirect objects tests:\n\n";
+	//not polymorphic, allocated on stack, automatically deleted
+	Animal directAnimal;
+	Dog directDog;
+	Cat directCat;
 
-    k->makeSound();
-    wrongmeta->makeSound();
+	directDog.makeSound();
+	directCat.makeSound();
 
-    delete wrongmeta;
-    delete k;
+	std::cout << "\ntesting copies:\n\n";
+	Dog originalDog;
+	Dog copyDog = originalDog;
 
-    return 0;
+	copyDog.makeSound();
+
+	return 0;
 }

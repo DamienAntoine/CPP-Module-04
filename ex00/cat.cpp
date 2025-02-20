@@ -2,15 +2,16 @@
 
 Cat::Cat()
 {
-    type = "Cat";
-    std::cout << "Cat object created" << std::endl;
-}
-Cat::~Cat()
-{
-    std::cout << "Cat object destroyed" << std::endl;
+	type = "Cat";
+	std::cout << "Cat created" << std::endl;
 }
 
-void    Cat::makeSound() const
+Cat::~Cat()
 {
-    std::cout << "Meow" << std::endl;
+	std::cout << "Cat destroyed" << std::endl;
+}
+
+void	Cat::makeSound() const
+{
+	std::cout << "meow" << std::endl;
 }
