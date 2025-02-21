@@ -1,7 +1,5 @@
 NAME     := Materias
-SRCS	:=	base/ICharacter.cpp \
-			base/AMateria.cpp \
-			base/IMateriaSource.cpp \
+SRCS	:=	base/AMateria.cpp \
 			concrete/character.cpp \
 			concrete/cure.cpp \
 			concrete/ice.cpp \
@@ -9,7 +7,7 @@ SRCS	:=	base/ICharacter.cpp \
 			main.cpp
 OBJS     := $(SRCS:.cpp=.o)
 CXX      := g++
-CXXFLAGS := -Wall -Werror -Wextra -I.
+CXXFLAGS := -Wall -Werror -Wextra -I. -std=c++98
 
 all: $(NAME)
 

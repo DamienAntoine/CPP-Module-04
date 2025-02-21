@@ -17,9 +17,11 @@ class Dog : public aAnimal
 	public:
 		Dog();
 		Dog(const Dog &other);
+
 		Dog& operator=(const Dog &other);
+
 		virtual ~Dog();
-		void	makeSound() const override;
+		virtual void	makeSound() const;
 };
 
 #endif

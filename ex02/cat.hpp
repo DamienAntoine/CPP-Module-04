@@ -17,9 +17,11 @@ class Cat : public aAnimal
 	public:
 		Cat();
 		Cat(const Cat &other);
+
         Cat& operator=(const Cat &other);
+
 		virtual ~Cat();
-		void	makeSound() const override;
+		virtual void	makeSound() const;
 };
 
 #endif

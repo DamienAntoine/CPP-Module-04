@@ -15,8 +15,8 @@ class MateriaSource : public IMateriaSource
 
 		MateriaSource& operator=(const MateriaSource& other);
 
-		virtual void learnMateria(AMateria*) override;
-		virtual AMateria* createMateria(std::string const & type) override;
+		virtual void learnMateria(AMateria*);
+		virtual AMateria* createMateria(std::string const & type);
 };
 
 #endif
