@@ -12,14 +12,14 @@ Character::Character(std::string const& name) : _name(name), _droppedcount(0)
 		i++;
 	}
 
-    i = 0;
-    while (i < FLOORSIZE)
-    {
-        this->_floor[i] = NULL;
-        i++;
-    }
+	i = 0;
+	while (i < FLOORSIZE)
+	{
+		this->_floor[i] = NULL;
+		i++;
+	}
 
-	std::cout << "Character " << this->_name << " created." << std::endl;
+	//std::cout << "Character " << this->_name << " created." << std::endl;
 }
 
 Character::~Character()
@@ -28,23 +28,23 @@ Character::~Character()
 	while (i < 4)
 	{
 		if (this->_inventory[i] != NULL)
-        {
+		{
 			delete(this->_inventory[i]);
-            this->_inventory[i] = NULL;
-        }
+			this->_inventory[i] = NULL;
+		}
 		i++;
 	}
 	i = 0;
 	while (i < _droppedcount)
 	{
 		if (this->_floor[i])
-        {
+		{
 			delete(this->_floor[i]);
-            this->_floor[i] = NULL;
-        }
+			this->_floor[i] = NULL;
+		}
 		i++;
 	}
-	std::cout << "Character " << this->_name << " destroyed." << std::endl;
+	//std::cout << "Character " << this->_name << " destroyed." << std::endl;
 }
 
 Character::Character(const Character& other) : _name(other._name)
@@ -64,7 +64,7 @@ Character::Character(const Character& other) : _name(other._name)
 		i++;
 	}
 
-	std::cout << "Character copy constructor called" << std::endl;
+	//std::cout << "Character copy constructor called" << std::endl;
 }
 
 Character& Character::operator=(const Character& other)
@@ -93,6 +93,21 @@ Character& Character::operator=(const Character& other)
 	return *this;
 }
 
+void Character::displayInventory() const
+{
+	int i = 0;
+	std::cout << "Inventory for " << _name << ":\n";
+
+	while (i < 4)
+	{
+		if (_inventory[i])
+			std::cout << "Slot " << i << ": " << _inventory[i]->getType() << "\n";
+		else
+			std::cout << "Slot " << i << ": (empty)\n";
+		i++;
+	}
+}
+
 std::string const & Character::getName() const
 {
 	return (this->_name);
@@ -100,11 +115,10 @@ std::string const & Character::getName() const
 
 void Character::equip(AMateria* m)
 {
-    std::cout << "entered equip function" << std::endl;
-    if (m == NULL)
-    {
-        return ;
-    }
+	if (m == NULL)
+	{
+		return ;
+	}
 
 	int i = 0;
 
@@ -113,10 +127,10 @@ void Character::equip(AMateria* m)
 		if (_inventory[i] == NULL)
 		{
 			_inventory[i] = m;
-            std::cout << "Equipped " << m->getType() << " at slot " << i << std::endl;
+			//std::cout << "Equipped " << m->getType() << " at slot " << i << std::endl;
 			break;
 		}
-        i++;
+		i++;
 	}
 }
 

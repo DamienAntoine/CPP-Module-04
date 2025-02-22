@@ -8,7 +8,7 @@ MateriaSource::MateriaSource()
 		_templates[i] = NULL;
 		i++;
 	}
-	std::cout << "MateriaSource default constructor called" << std::endl;
+	//std::cout << "MateriaSource default constructor called" << std::endl;
 }
 
 MateriaSource::MateriaSource(const MateriaSource& other)
@@ -34,7 +34,7 @@ MateriaSource::~MateriaSource()
 			delete _templates[i];
 		i++;
 	}
-	std::cout << "MateriaSource destructor called" << std::endl;
+	//std::cout << "MateriaSource destructor called" << std::endl;
 }
 
 MateriaSource& MateriaSource::operator=(const MateriaSource& other)

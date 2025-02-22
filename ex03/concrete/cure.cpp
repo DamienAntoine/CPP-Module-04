@@ -1,18 +1,18 @@
 #include "cure.hpp"
 
-Cure::Cure() : AMateria("Cure")
+Cure::Cure() : AMateria("cure")
 {
-	std::cout << "Cure constructor called" << std::endl;
+	//std::cout << "Cure constructor called" << std::endl;
 }
 
 Cure::Cure(const Cure& other) : AMateria(other)
 {
-	std::cout << "Cure copy constructor called" << std::endl;
+	//std::cout << "Cure copy constructor called" << std::endl;
 }
 
 Cure::~Cure()
 {
-	std::cout << "Cure destructor called" << std::endl;
+	//std::cout << "Cure destructor called" << std::endl;
 }
 
 AMateria* Cure::clone() const
