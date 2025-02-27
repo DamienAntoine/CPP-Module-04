@@ -1,7 +1,7 @@
 NAME     := Polymorphism00
 SRCS     := main.cpp cat.cpp dog.cpp animal.cpp wronganimal.cpp wrongcat.cpp
 OBJS     := $(SRCS:.cpp=.o)
-CXX      := g++
+CXX      := c++
 CXXFLAGS := -Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)

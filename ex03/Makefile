@@ -6,7 +6,7 @@ SRCS	:=	base/AMateria.cpp \
 			concrete/MateriaSource.cpp \
 			main.cpp
 OBJS     := $(SRCS:.cpp=.o)
-CXX      := g++
+CXX      := c++
 CXXFLAGS := -Wall -Werror -Wextra -I. -std=c++98
 
 all: $(NAME)
